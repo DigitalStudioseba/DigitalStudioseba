@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="100%">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;family=Orbitron:wght@700&amp;display=swap');
+    .bg { fill: #0d0e16; }
+    .border { stroke: #22d3ee; stroke-width: 1.5; fill: none; opacity: 0.4; }
+    .orbit { fill: none; stroke: #22d3ee; stroke-width: 1; stroke-dasharray: 4, 4; opacity: 0.3; }
+    .glowing-core { fill: url(#neon-glow); filter: drop-shadow(0 0 8px #22d3ee); }
+    .chip { fill: #0f172a; stroke: #a78bfa; stroke-width: 1.2; }
+    .chip-text { font-family: 'Fira Code', monospace; fill: #22d3ee; font-size: 11px; }
+    .orbit-label { font-family: 'Orbitron', sans-serif; fill: #a78bfa; font-size: 18px; font-weight: bold; }
+    
+    /* Animation for orbit motion */
+    @keyframes rotateOrbit { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .anim-orbit-1 { transform-origin: 620px 110px; animation: rotateOrbit 12s linear infinite; }
+    .anim-orbit-2 { transform-origin: 620px 110px; animation: rotateOrbit 18s linear infinite reverse; }
+  </style>
+
+  <rect width="800" height="220" class="bg" rx="16"/>
+  <rect width="796" height="216" x="2" y="2" class="border" rx="14"/>
+
+  <!-- Details Card left -->
+  <g transform="translate(40, 45)">
+    <text x="0" y="20" class="orbit-label">🚀 CURRENT TECH ORBIT</text>
+    <text x="0" y="45" font-family="Fira Code" font-size="12" fill="#94a3b8">Interactive &amp; modern web stacks.</text>
+    
+    <!-- Badges -->
+    <g transform="translate(0, 75)">
+      <!-- HTML -->
+      <rect x="0" y="0" width="80" height="26" class="chip" rx="13"/>
+      <text x="40" y="17" class="chip-text" text-anchor="middle">HTML5</text>
+      <!-- CSS -->
+      <rect x="90" y="0" width="80" height="26" class="chip" rx="13" style="stroke:#f472b6;"/>
+      <text x="130" y="17" class="chip-text" text-anchor="middle" style="fill:#f472b6;">CSS3</text>
+      <!-- JS -->
+      <rect x="0" y="40" width="110" height="26" class="chip" rx="13" style="stroke:#22d3ee;"/>
+      <text x="55" y="57" class="chip-text" text-anchor="middle" style="fill:#22d3ee;">JavaScript</text>
+      <!-- React -->
+      <rect x="120" y="40" width="110" height="26" class="chip" rx="13" style="stroke:#38bdf8;"/>
+      <text x="175" y="57" class="chip-text" text-anchor="middle" style="fill:#38bdf8;">React.js</text>
+    </g>
+  </g>
+
+  <!-- Orbits right visual -->
+  <g transform="translate(10, 0)">
+    <!-- Orbits visual -->
+    <circle cx="620" cy="110" r="40" class="orbit" />
+    <circle cx="620" cy="110" r="70" class="orbit" />
+    <circle cx="620" cy="110" r="95" class="orbit" />
+
+    <!-- Center Core -->
+    <circle cx="620" cy="110" r="15" class="glowing-core" />
+    <text x="620" y="114" font-family="Fira Code" font-weight="bold" font-size="10" fill="#0d0e16" text-anchor="middle">DEV</text>
+
+    <!-- Orbit 1 (Inner) -->
+    <g class="anim-orbit-1">
+      <circle cx="580" cy="110" r="10" fill="#e34c26" />
+      <text x="580" y="113" font-family="Fira Code" font-size="8" fill="#fff" text-anchor="middle">H5</text>
+      <circle cx="660" cy="110" r="10" fill="#264de4" />
+      <text x="660" y="113" font-family="Fira Code" font-size="8" fill="#fff" text-anchor="middle">C3</text>
+    </g>
+
+    <!-- Orbit 2 (Outer) -->
+    <g class="anim-orbit-2">
+      <circle cx="535" cy="70" r="12" fill="#f7df1e" />
+      <text x="535" y="73" font-family="Fira Code" font-weight="bold" font-size="9" fill="#000" text-anchor="middle">JS</text>
+      <circle cx="705" cy="150" r="12" fill="#00d8ff" />
+      <text x="705" y="153" font-family="Fira Code" font-weight="bold" font-size="8" fill="#000" text-anchor="middle">RJS</text>
+    </g>
+  </g>
+
+  <defs>
+    <radialGradient id="neon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </radialGradient>
+  </defs>
+</svg>
