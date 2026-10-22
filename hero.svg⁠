@@ -1,15 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;family=Orbitron:wght@700;900&amp;display=swap');
     .bg { fill: #0d0e16; }
     .neon-border { stroke: url(#gradient); stroke-width: 2; fill: none; }
     .rec-dot { fill: #f472b6; animation: blink 1.2s infinite; }
-    .glow-text { font-family: 'Orbitron', sans-serif; font-weight: 900; fill: #22d3ee; filter: drop-shadow(0 0 6px #22d3ee); }
-    .mono-text { font-family: 'Fira Code', monospace; fill: #a78bfa; font-size: 14px; }
-    .role-text { font-family: 'Fira Code', monospace; font-size: 16px; fill: #f472b6; }
+    .glow-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; fill: #22d3ee; }
+    .mono-text { font-family: monospace, Courier; fill: #a78bfa; font-size: 14px; }
+    .role-text { font-family: monospace, Courier; font-size: 16px; fill: #f472b6; font-weight: bold; }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-    @keyframes drawIn { 0% { stroke-dashoffset: 1000; } 100% { stroke-dashoffset: 0; } }
-    .draw { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: drawIn 3s ease forwards; }
     .corner { stroke: #22d3ee; stroke-width: 3; fill: none; }
   </style>
   <defs>
@@ -21,30 +18,29 @@
   </defs>
   
   <rect width="800" height="240" class="bg" rx="16"/>
-  <rect width="796" height="236" x="2" y="2" class="neon-border draw" rx="14"/>
+  <rect width="796" height="236" x="2" y="2" class="neon-border" rx="14"/>
 
   <!-- Camera Viewfinder Overlay -->
-  <path d="M 15 40 L 15 15 L 40 15" class="corner" />
-  <path d="M 785 40 L 785 15 L 760 15" class="corner" />
-  <path d="M 15 200 L 15 225 L 40 225" class="corner" />
-  <path d="M 785 200 L 785 225 L 760 225" class="corner" />
+  <path d="M 20 45 L 20 20 L 45 20" class="corner" />
+  <path d="M 780 45 L 780 20 L 755 20" class="corner" />
+  <path d="M 20 195 L 20 220 L 45 220" class="corner" />
+  <path d="M 780 195 L 780 220 L 755 220" class="corner" />
 
-  <circle cx="760" cy="40" r="6" class="rec-dot"/>
-  <text x="705" y="44" class="mono-text" style="font-weight:bold;">● REC</text>
-  <text x="35" y="44" class="mono-text">CAMERA_VIEWFINDER_01.MOV</text>
+  <circle cx="750" cy="40" r="6" class="rec-dot"/>
+  <text x="695" y="44" class="mono-text" style="font-weight:bold;">● REC</text>
+  <text x="40" y="44" class="mono-text">CAMERA_VIEWFINDER_01.MOV</text>
 
   <!-- Content -->
-  <text x="50" y="110" class="glow-text" font-size="40">MONIR HOSSAIN</text>
-  <text x="50" y="145" class="role-text">⚡ Web Developer &amp; Digital Creator</text>
+  <text x="45" y="110" class="glow-text" font-size="38">MONIR HOSSAIN</text>
+  <text x="45" y="145" class="role-text">⚡ Web Developer &amp; Digital Creator</text>
   
-  <g transform="translate(50, 180)">
-    <rect width="140" height="26" rx="13" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="1"/>
-    <circle cx="15" cy="13" r="4" fill="#22d3ee">
-      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+  <g transform="translate(45, 175)">
+    <rect width="150" height="28" rx="14" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="1.5"/>
+    <circle cx="16" cy="14" r="5" fill="#22d3ee">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
     </circle>
-    <text x="28" y="18" font-family="Fira Code" font-size="11" fill="#22d3ee" font-weight="bold">OPEN TO COLLABS</text>
+    <text x="32" y="19" font-family="monospace, Courier" font-size="12" fill="#22d3ee" font-weight="bold">OPEN TO COLLABS</text>
   </g>
 
-  <!-- Location and Info badge -->
-  <text x="210" y="197" class="mono-text" font-size="12">📍 Dhaka, Bangladesh | hello@digiseba.shop</text>
+  <text x="215" y="194" class="mono-text" font-size="13">📍 Dhaka, Bangladesh | hello@digiseba.shop</text>
 </svg>
