@@ -1,6 +1,6 @@
 <div align="center">
 
-  <!-- 1. Hero Banner -->
+ <!-- 1. Hero Banner -->
   <img src="hero.svg?v=999" width="100%" alt="Monir Hossain Banner"/>
 
   <br/><br/>
