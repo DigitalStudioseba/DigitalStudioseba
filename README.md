@@ -1,38 +1,39 @@
-<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" width="100%" height="100%">
+  <style>
+    .bg { fill: #0d0e16; }
+    .neon-border { stroke: #22d3ee; stroke-width: 2; fill: none; }
+    .rec-dot { fill: #f472b6; animation: blink 1.2s infinite; }
+    .glow-text { font-family: system-ui, -apple-system, sans-serif; font-weight: 900; fill: #22d3ee; }
+    .mono-text { font-family: monospace, Courier; fill: #a78bfa; font-size: 14px; }
+    .role-text { font-family: monospace, Courier; font-size: 16px; fill: #f472b6; font-weight: bold; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .corner { stroke: #22d3ee; stroke-width: 3; fill: none; }
+  </style>
+  
+  <rect width="800" height="240" class="bg" rx="16" />
+  <rect width="796" height="236" x="2" y="2" class="neon-border" rx="14" />
 
-  <!-- Hero Section -->
-  <img src="hero.svg?v=2" width="100%" alt="Monir Hossain Banner"/>
+  <!-- Viewfinder Overlay -->
+  <path d="M 20 45 L 20 20 L 45 20" class="corner" />
+  <path d="M 780 45 L 780 20 L 755 20" class="corner" />
+  <path d="M 20 195 L 20 220 L 45 220" class="corner" />
+  <path d="M 780 195 L 780 220 L 755 220" class="corner" />
 
-  <br/><br/>
+  <circle cx="750" cy="40" r="6" class="rec-dot" />
+  <text x="695" y="44" class="mono-text" style="font-weight:bold;">● REC</text>
+  <text x="40" y="44" class="mono-text">CAMERA_VIEWFINDER_01.MOV</text>
 
-  <!-- Profile Grid -->
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-      <td width="100%" colspan="2">
-        <img src="about-life.svg?v=1" width="100%" alt="Capabilities and Hobbies Carousel"/>
-      </td>
-    </tr>
-    <tr>
-      <td width="50%">
-        <img src="stack.svg?v=1" width="100%" alt="Tech Orbit Stack"/>
-      </td>
-      <td width="50%">
-        <img src="id-dashboard.svg?v=1" width="100%" alt="ID and Performance Dashboard"/>
-      </td>
-    </tr>
-  </table>
+  <!-- Content -->
+  <text x="45" y="110" class="glow-text" font-size="38">MONIR HOSSAIN</text>
+  <text x="45" y="145" class="role-text">⚡ Web Developer & Digital Creator</text>
+  
+  <g transform="translate(45, 175)">
+    <rect width="150" height="28" rx="14" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-width="1.5" />
+    <circle cx="16" cy="14" r="5" fill="#22d3ee">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="19" font-family="monospace, Courier" font-size="12" fill="#22d3ee" font-weight="bold">OPEN TO COLLABS</text>
+  </g>
 
-  <br/><br/>
-
-  <!-- 3D Skyline View -->
-  <h3>🏙️ My 3D Commit Skyline</h3>
-  <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Skyline View"/>
-
-  <br/><br/>
-
-  <!-- Connect Footer -->
-  <a href="mailto:hello@digiseba.shop">
-    <img src="connect.svg?v=1" width="100%" alt="Connect Card"/>
-  </a>
-
-</div>
+  <text x="215" y="194" class="mono-text" font-size="13">📍 Dhaka, Bangladesh | hello@digiseba.shop</text>
+</svg>
