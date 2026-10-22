@@ -1,42 +1,22 @@
 name: GitHub 3D Contrib Skyline
 
 on:
-  schedule: # প্রতি ২৪ ঘণ্টায় রান হবে
+  schedule:
     - cron: "0 0 * * *"
-  workflow_dispatch: # ম্যানুয়ালি চালানোর জন্য
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: DigitalStudioseba
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A .
-          git commit -m "Generated 3D Skyline" || exit 0
-          git push
-name: GitHub 3D Contrib Skyline
-
-on:
-  schedule: # প্রতি ২৪ ঘণ্টায় রান হবে
-    - cron: "0 0 * * *"
-  workflow_dispatch: # ম্যানুয়ালি চালানোর জন্য
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: DigitalStudioseba
+          USERNAME: ${{ github.repository_owner }}
       - name: Commit & Push
         run: |
           git config user.name github-actions
