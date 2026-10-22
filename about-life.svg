@@ -1,65 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="100%">
-  <defs>
-    <clipPath id="carousel-clip">
-      <rect x="0" y="0" width="320" height="110" />
-    </clipPath>
-  </defs>
-  <style>
+  <style type="text/css">
+    <![CDATA[
     .bg { fill: #0d0e16; }
-    .border { stroke: #a78bfa; stroke-width: 1.5; fill: none; opacity: 0.4; }
-    .text-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; fill: #a78bfa; font-size: 18px; }
-    .text-body { font-family: monospace, Courier; fill: #e2e8f0; font-size: 13px; }
-    .carousel { animation: slideShow 12s infinite; }
-    @keyframes slideShow {
-      0%, 25% { transform: translateY(0px); }
-      28%, 50% { transform: translateY(-40px); }
-      53%, 75% { transform: translateY(-80px); }
-      78%, 100% { transform: translateY(-120px); }
-    }
-    .loading-bar { fill: none; stroke: #f472b6; stroke-width: 3; stroke-dasharray: 200; stroke-dashoffset: 200; animation: fillBar 4s linear infinite; }
-    @keyframes fillBar { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
+    .card-border { stroke: #a78bfa; stroke-width: 1.5; fill: none; opacity: 0.4; }
+    .title-purple { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; fill: #a78bfa; font-size: 16px; letter-spacing: 1px; }
+    .title-pink { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; fill: #f472b6; font-size: 16px; letter-spacing: 1px; }
+    .item-text { font-family: monospace, Courier, sans-serif; fill: #e2e8f0; font-size: 13px; }
+    .hobby-title { font-family: monospace, Courier, sans-serif; font-weight: bold; font-size: 14px; fill: #22d3ee; }
+    .hobby-desc { font-family: monospace, Courier, sans-serif; font-size: 12px; fill: #94a3b8; }
+    .bar-bg { fill: none; stroke: #334155; stroke-width: 3; }
+    .bar-active { fill: none; stroke: #f472b6; stroke-width: 3; stroke-dasharray: 200; stroke-dashoffset: 200; animation: loadBar 4s linear infinite; }
+    @keyframes loadBar { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
+    ]]>
   </style>
 
+  <!-- Background & Card Border -->
   <rect width="800" height="220" class="bg" rx="16" />
-  <rect width="796" height="216" x="2" y="2" class="border" rx="14" />
+  <rect width="796" height="216" x="2" y="2" class="card-border" rx="14" />
 
-  <!-- Left: What I Build -->
-  <g transform="translate(35, 35)">
-    <text x="0" y="20" class="text-title">⚡ WHAT I BUILD</text>
-    <text x="0" y="55" class="text-body">• Custom & interactive web platforms.</text>
-    <text x="0" y="80" class="text-body">• Dynamic user interfaces with React.</text>
-    <text x="0" y="105" class="text-body">• Scalable backend solutions & UI designs.</text>
-    <text x="0" y="130" class="text-body">• SEO & online presence optimization.</text>
+  <!-- Left Column: What I Build -->
+  <g transform="translate(35, 30)">
+    <text x="0" y="20" class="title-purple">> WHAT I BUILD</text>
+    
+    <circle cx="5" cy="52" r="3" fill="#22d3ee" />
+    <text x="18" y="56" class="item-text">Custom and interactive web platforms.</text>
+
+    <circle cx="5" cy="77" r="3" fill="#22d3ee" />
+    <text x="18" y="81" class="item-text">Dynamic user interfaces with React.</text>
+
+    <circle cx="5" cy="102" r="3" fill="#22d3ee" />
+    <text x="18" y="106" class="item-text">Scalable backend solutions and UI designs.</text>
+
+    <circle cx="5" cy="127" r="3" fill="#22d3ee" />
+    <text x="18" y="131" class="item-text">SEO and online presence optimization.</text>
   </g>
 
-  <!-- Divider -->
-  <line x1="420" y1="25" x2="420" y2="195" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1" />
+  <!-- Vertical Divider -->
+  <line x1="420" y1="25" x2="420" y2="195" stroke="#a78bfa" stroke-opacity="0.25" stroke-width="1" />
 
-  <!-- Right: Hobbies Carousel -->
-  <g transform="translate(460, 35)">
-    <text x="0" y="20" class="text-title" style="fill:#f472b6;">⚡ HOBBIES & PASSION</text>
-    <line x1="0" y1="35" x2="200" y2="35" stroke="#e2e8f0" stroke-opacity="0.2" stroke-width="3" />
-    <line x1="0" y1="35" x2="200" y2="35" class="loading-bar" />
+  <!-- Right Column: Hobbies Carousel (Crossfade) -->
+  <g transform="translate(460, 30)">
+    <text x="0" y="20" class="title-pink">> HOBBIES AND PASSION</text>
+    
+    <!-- Progress Indicator Line -->
+    <line x1="0" y1="35" x2="200" y2="35" class="bar-bg" />
+    <line x1="0" y1="35" x2="200" y2="35" class="bar-active" />
 
-    <g transform="translate(0, 50)" clip-path="url(#carousel-clip)">
-      <g class="carousel">
-        <g transform="translate(0, 10)">
-          <text x="0" y="15" class="text-body" style="fill:#22d3ee; font-weight: bold;">[ GAMING ]</text>
-          <text x="0" y="35" class="text-body" style="font-size:12px; fill:#94a3b8;">Leveling up on visual & logic challenges.</text>
-        </g>
-        <g transform="translate(0, 50)">
-          <text x="0" y="15" class="text-body" style="fill:#22d3ee; font-weight: bold;">[ PHOTOGRAPHY ]</text>
-          <text x="0" y="35" class="text-body" style="font-size:12px; fill:#94a3b8;">Capturing life framing and stories.</text>
-        </g>
-        <g transform="translate(0, 90)">
-          <text x="0" y="15" class="text-body" style="fill:#22d3ee; font-weight: bold;">[ TRAVELING ]</text>
-          <text x="0" y="35" class="text-body" style="font-size:12px; fill:#94a3b8;">Exploring cultures & inspirations.</text>
-        </g>
-        <g transform="translate(0, 130)">
-          <text x="0" y="15" class="text-body" style="fill:#22d3ee; font-weight: bold;">[ BUSINESS ]</text>
-          <text x="0" y="35" class="text-body" style="font-size:12px; fill:#94a3b8;">Venturing into digital creative agency.</text>
-        </g>
-      </g>
+    <!-- Slide 1: GAMING -->
+    <g transform="translate(0, 70)">
+      <animate attributeName="opacity" values="1;1;0;0;0;0;0;1" dur="12s" repeatCount="indefinite" />
+      <text x="0" y="0" class="hobby-title">[ GAMING ]</text>
+      <text x="0" y="25" class="hobby-desc">Leveling up on visual and logic challenges.</text>
+    </g>
+
+    <!-- Slide 2: PHOTOGRAPHY -->
+    <g transform="translate(0, 70)">
+      <animate attributeName="opacity" values="0;0;1;1;0;0;0;0" dur="12s" repeatCount="indefinite" />
+      <text x="0" y="0" class="hobby-title">[ PHOTOGRAPHY ]</text>
+      <text x="0" y="25" class="hobby-desc">Capturing life framing, shadows and stories.</text>
+    </g>
+
+    <!-- Slide 3: TRAVELING -->
+    <g transform="translate(0, 70)">
+      <animate attributeName="opacity" values="0;0;0;0;1;1;0;0" dur="12s" repeatCount="indefinite" />
+      <text x="0" y="0" class="hobby-title">[ TRAVELING ]</text>
+      <text x="0" y="25" class="hobby-desc">Exploring cultures, places and inspirations.</text>
+    </g>
+
+    <!-- Slide 4: BUSINESS -->
+    <g transform="translate(0, 70)">
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;1" dur="12s" repeatCount="indefinite" />
+      <text x="0" y="0" class="hobby-title">[ BUSINESS ]</text>
+      <text x="0" y="25" class="hobby-desc">Venturing into digital creative agency.</text>
     </g>
   </g>
 </svg>
