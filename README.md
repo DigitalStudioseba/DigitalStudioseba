@@ -24,15 +24,15 @@
 
   <br/><br/>
 
-  <!-- 3D Contribution Skyline (ধাপ ৬ সফল করার পর এটি দৃশ্যমান হবে) -->
-  <h3>🏙️ My 3D Commit Skyline (rebuilt daily)</h3>
-  <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Skyline View of Commit Activities"/>
+  <!-- 3D Skyline View -->
+  <h3>🏙️ My 3D Commit Skyline</h3>
+  <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Skyline View"/>
 
   <br/><br/>
 
-  <!-- Connect Footers -->
+  <!-- Connect Footer -->
   <a href="mailto:hello@digiseba.shop">
-    <img src="connect.svg?v=1" width="100%" alt="Let's build together Monir Hossain Connect Card"/>
+    <img src="connect.svg?v=1" width="100%" alt="Connect Card"/>
   </a>
 
 </div>
