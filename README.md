@@ -1,16 +1,16 @@
 <div align="center">
 
-  <!-- Hero Banner -->
-  <img src="hero.svg?v=3" width="100%" alt="Monir Hossain Banner"/>
+  <!-- 1. Hero Banner -->
+  <img src="hero.svg?v=10" width="100%" alt="Monir Hossain Banner"/>
 
   <br/><br/>
 
-  <!-- About Life -->
-  <img src="about-life.svg?v=3" width="100%" alt="Capabilities and Hobbies Carousel"/>
+  <!-- 2. About & Hobbies -->
+  <img src="about-life.svg?v=10" width="100%" alt="Capabilities and Hobbies Carousel"/>
 
   <br/><br/>
 
-  <!-- Tech and ID Cards -->
+  <!-- 3. Tech Stack & ID Dashboard -->
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
       <td width="50%">
@@ -24,13 +24,13 @@
 
   <br/><br/>
 
-  <!-- 3D Skyline View -->
+  <!-- 4. 3D Commit Skyline -->
   <h3>🏙️ My 3D Commit Skyline</h3>
   <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Skyline View"/>
 
   <br/><br/>
 
-  <!-- Connect Footer -->
+  <!-- 5. Connect Footer -->
   <a href="mailto:hello@digiseba.shop">
     <img src="connect.svg?v=1" width="100%" alt="Connect Card"/>
   </a>
