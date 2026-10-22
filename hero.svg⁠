@@ -13,7 +13,7 @@
   <rect width="800" height="240" class="bg" rx="16" />
   <rect width="796" height="236" x="2" y="2" class="neon-border" rx="14" />
 
-  <!-- Viewfinder Overlay -->
+  <!-- Camera Viewfinder Overlay -->
   <path d="M 20 45 L 20 20 L 45 20" class="corner" />
   <path d="M 780 45 L 780 20 L 755 20" class="corner" />
   <path d="M 20 195 L 20 220 L 45 220" class="corner" />
@@ -23,7 +23,7 @@
   <text x="695" y="44" class="mono-text" style="font-weight:bold;">● REC</text>
   <text x="40" y="44" class="mono-text">CAMERA_VIEWFINDER_01.MOV</text>
 
-  <!-- Content -->
+  <!-- Profile Content -->
   <text x="45" y="110" class="glow-text" font-size="38">MONIR HOSSAIN</text>
   <text x="45" y="145" class="role-text">⚡ Web Developer & Digital Creator</text>
   
